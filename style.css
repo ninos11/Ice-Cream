@@ -1,0 +1,103 @@
+/* Gör navigationen horisontell och snygg */
+.nav-bar {
+    background-color: #222;   /* mörk bakgrund */
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+    padding-left: 30px;  /* lägger till padding till vänster */
+    align-items: center;
+    position: relative;  /* behövs för absolut positionering av loader */
+}
+
+.nav-items {
+    list-style: none;        /* tar bort punkter */
+    display: flex;           /* lägger li bredvid varandra */
+    gap: 30px;               /* mellanrum mellan länkar */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item a {
+    color: white;            /* vit text */
+    text-decoration: none;   /* tar bort understrykning */
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #636262;          /* ändra färg när man hovrar */
+    text-decoration: none;
+}
+.nav-bar .logo a
+{
+    font-size: 35px;
+    display: flex;
+    padding-left: 30px;
+    font-family: 'Brush Script MT', cursive;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+/* logo ice cream */
+
+.loader {
+  height: 45px;
+  width: 30px;
+  border-radius: 16.5px 16.5px 3px 3px;
+  position: relative;
+  background: #f0744f;
+  
+  
+
+  background-image: linear-gradient(
+    0deg,
+    #f63a99 25%,
+    #30dcf6 20%,
+    #30dcf6 20%,
+    #668c92 50%,
+    #85782a 40%,
+    #f2d200 50%,
+    #f2d200 75%,
+    #70ca5c 75%
+  );
+  background-position: 0px 0px;
+  background-size: auto 50px;
+  background-repeat: repeat-y;
+  animation: colorShift 10s linear infinite;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  bottom: 4.5px;
+  width: 4.5px;
+  height: 30px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+  box-shadow: 0 4.5px 0.6px rgba(0, 0, 0, 0.25) inset;
+  width: 9.6px;
+  height: 13.5px;
+  background: #534b44;
+  border-radius: 0 0 3.6px 3.6px;
+}
+
+@keyframes colorShift {
+  to {
+    background-position: 0 175px;
+  }
+}
